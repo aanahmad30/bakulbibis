@@ -1,5 +1,5 @@
 import { assets } from '../assets/assets';
-import NewsLetterBox from '../components/NewsLetterBox';
+import NewsLetterBox from '../components/NewsLetterBox.jsx';
 import Title from '../components/Title';
 
 const About = () => {
