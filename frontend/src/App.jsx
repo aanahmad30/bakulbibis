@@ -9,7 +9,7 @@ import Collection from './pages/Collection'
 import Contact from './pages/Contact'
 import Home from './pages/Home'
 import Login from './pages/Login'
-import Orders from './pages/orders'
+import Orders from './pages/Orders'
 import PlaceOrder from './pages/PlaceOrder'
 import Product from './pages/Product'
 import { ToastContainer, toast } from 'react-toastify';

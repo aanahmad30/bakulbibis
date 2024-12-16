@@ -2,7 +2,7 @@ import React from 'react'
 import BestSeller from '../components/BestSeller'
 import Hero from '../components/Hero'
 import LatestCollection from '../components/LatestCollection'
-import NewsletterBox from '../components/NewsletterBox'
+import NewsLetterBox from '../components/NewsLetterBox'
 import OurPolicy from '../components/OurPolicy'
 
 const Home = () => {
@@ -12,7 +12,7 @@ const Home = () => {
       <LatestCollection/>
       <BestSeller />
       <OurPolicy />
-      <NewsletterBox />
+      <NewsLetterBox />
     </div>
   )
 }
