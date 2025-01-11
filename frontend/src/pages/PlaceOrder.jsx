@@ -73,6 +73,28 @@ const PlaceOrder = () => {
           Alamat: ${formData.street}, ${formData.city}, ${formData.state}, ${formData.zipcode}
           Telepon: ${formData.phone}`;
           const waUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(waMessage)}`;
+
+          // Kirim request ke backend untuk memperbarui status pesanan menjadi 'Payment Pending'
+          try {
+            const response = await axios.post(backendUrl + '/api/order/place', {
+              address: formData,
+              items: orderItems,
+              amount: getCartAmount() + delivery_fee,
+              paymentMethod: 'qris',
+              status: 'Payment Pending' // Status sementara sebelum pembayaran diverifikasi
+            }, { headers: { token } });
+
+            if (response.data.success) {
+              setCartItems({});
+              navigate('/orders');
+            } else {
+              toast.error(response.data.message);
+            }
+          } catch (error) {
+            console.error(error);
+            toast.error('Terjadi kesalahan saat mengirim data pesanan.');
+          }
+
           window.open(waUrl, '_blank');
           break;
 
