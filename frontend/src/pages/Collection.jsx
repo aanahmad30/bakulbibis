@@ -104,7 +104,10 @@ const Collection = () => {
               <input className='w-3' type="checkbox" value={'Pakaian'} onChange={toggleCategory} /> Pakaian
             </p>
             <p className='flex gap-2'>
-              <input className='w-3' type="checkbox" value={'Aksesoris'} onChange={toggleCategory} /> Aksesoris
+              <input className='w-3' type="checkbox" value={'Kerajinan'} onChange={toggleCategory} /> Kerajinan
+            </p>
+            <p className='flex gap-2'>
+              <input className='w-3' type="checkbox" value={'Agrikultur'} onChange={toggleCategory} /> Agrikultur
             </p>
             
           </div>
