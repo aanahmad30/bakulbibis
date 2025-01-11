@@ -67,7 +67,7 @@ const PlaceOrder = () => {
 
         case 'qris':
           toast.info('Silakan pindai QRIS untuk pembayaran.');
-          const whatsappNumber = '083866151200'; // Ganti dengan nomor WA UMKM
+          const whatsappNumber = '+6283866151200'; // Ganti dengan nomor WA UMKM
           const waMessage = `Halo, saya telah membayar pesanan dengan total Rp${getCartAmount() + delivery_fee} melalui QRIS. Berikut detail pesanan saya:
           Nama: ${formData.firstName} ${formData.lastName}
           Alamat: ${formData.street}, ${formData.city}, ${formData.state}, ${formData.zipcode}
