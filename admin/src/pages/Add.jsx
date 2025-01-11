@@ -104,7 +104,8 @@ const Add = ({token}) => {
             <option value="Makanan">Makanan</option>
             <option value="Minuman">Minuman</option>
             <option value="Pakaian">Pakaian</option>
-            <option value="Aksesoris">Aksesoris</option>
+            <option value="Kerajinan">Kerajinan</option>
+            <option value="Agrikultur">Agrikultur</option>
           </select>
         </div>
 
@@ -114,7 +115,8 @@ const Add = ({token}) => {
           <option value="Makanan">Makanan</option>
             <option value="Minuman">Minuman</option>
             <option value="Pakaian">Pakaian</option>
-            <option value="Aksesoris">Aksesoris</option>
+            <option value="Kerajinan">Kerajinan</option>
+            <option value="Agrikultur">Agrikultur</option>
           </select>
         </div>
 
