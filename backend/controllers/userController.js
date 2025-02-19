@@ -16,7 +16,7 @@ const loginUser = async (req, res) => {
         const user = await userModel.findOne({ email });
 
         if (!user) {
-            return res.json({ success: false, message: "User doesn't exists" })
+            return res.json({ success: false, message: "Pengguna Belum Terdaftar" })
         }
 
         const isMatch = await bcrypt.compare(password, user.password);
@@ -28,7 +28,7 @@ const loginUser = async (req, res) => {
 
         }
         else {
-            res.json({ success: false, message: 'Invalid credentials' })
+            res.json({ success: false, message: 'Email / Password Salah' })
         }
 
     } catch (error) {
@@ -46,7 +46,7 @@ const registerUser = async (req, res) => {
         // checking user already exists or not
         const exists = await userModel.findOne({ email })
         if (exists) {
-            return res.json({ success: false, message: "User Already exists" })
+            return res.json({ success: false, message: "Email Sudah Digunakan" })
         }
 
         // validating email format & strong password 
@@ -90,7 +90,7 @@ const adminLogin = async (req, res) => {
             const token = jwt.sign(email+password,process.env.JWT_SECRET);
             res.json({success:true,token})
         } else {
-            res.json({success:false,message:"Invalid Credentials"})
+            res.json({success:false,message:"Email / Password Salah"})
         }
 
     } catch (error) {
